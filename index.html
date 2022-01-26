@@ -9,6 +9,23 @@
     <title>Asistencia</title>
 </head>
 <body>
+    <script>
+        
+        function load() {
+          var ua = navigator.userAgent;
+  
+          if (ua.match('Win').length!=0) {
+              $('#Android').remove();
+          }
+          if (ua.match('Android').length!=0) {
+              $('#Windows').remove();
+          }
+          alert("evento load detectado!");
+        }
+        window.onload = load;
+      
+      </script>
+
     <header>
         <h2 class="logo">Registrate!</h2>
         <input type="checkbox" id="check">
@@ -16,9 +33,9 @@
             &#8801
         </label>
         <nav class="menu">
-            <a href="https://riplazar.github.io/">inicio</a> 
+            <a href="#">inicio</a> 
             <a href="https://drive.google.com/uc?export=download&confirm=g52I&id=1I2mTuUwAQQuLp3l34tcOAdYuSsWz2ejF">Descargar-Aplicación</a>
-            <a href="https://memegenerator.net/img/images/400x/71308550.jpg">Contacto</a>
+            <a href="#">Contacto</a>
             <label for="check" class="esconder-menu">
                 &#215  
             </label>
@@ -26,7 +43,7 @@
     </header>
     <section id="banner">
           <div class="contenido-banner">
-              <H1>Asistencia: </H1><h4>Sistema de control de asistencia con conexión directa al correo y envió instantáneo de información destinada a la medición presencial. Trabajo directo con aplicación y lectura de códigos QR de identificador único.</h4>
+              <h1><span>Asistencia: </span> <br>Sistema de control de asistencia con conexión directa al correo y envió instantáneo de información destinada a la medición presencial. Trabajo directo con aplicación y lectura de códigos QR de identificador único.</h1>
               <a href="#" class="boton-empezar">INICIAR</a>
           </div>
     </section>
@@ -43,9 +60,11 @@
         <p>Ingeniero Informático</p>
         <a href="#" class="boton-saber-mas">Saber Más</a>
     </div>
-    <div>
+    <div id="Windows">
         <img src="./Imagenes/5.png" alt="">
-        <h4>Descarga Aplicación</h4>
+        <h4>Analiza codigo QR para descargar con tu celular</h4>
+    </div>
+    <div id="Android">
         <p>Descarga nuestra aplicación Directamente </p>
         <a href="https://drive.google.com/uc?export=download&confirm=g52I&id=1I2mTuUwAQQuLp3l34tcOAdYuSsWz2ejF" class="boton-saber-mas">Descargar APK</a>
     </div>
@@ -70,7 +89,7 @@
             </div>
         </div>
         <div class="boton-iconos">
-            <a href="https://www.sicomweb.com.mx/que_es_una_pagina_web_responsiva.php" class="boton-saber-mas">Saber Más</a>
+            <a href="#" class="boton-saber-mas">Saber Más</a>
         </div>
     </section>
 
