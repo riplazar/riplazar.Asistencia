@@ -17,10 +17,10 @@
            var wn = document.getElementById('Windows');
            var ad = document.getElementById('Android');
           if (ua.match('Win').length!=0) {
-              wn.remove();
+              ad.remove();
           }
           if (ua.match('Android').length!=0) {
-              ad.remove();
+              wn.remove();
           }
           alert("evento load detectado!");
         }
@@ -63,9 +63,11 @@
     </div>
     <div onload=load() id="Windows">
         <img src="./Imagenes/5.png" alt="">
+        <p>Escanea para descargar la app>
     </div>
     <div onload=load() id="Android">
         <a href="https://drive.google.com/uc?export=download&confirm=g52I&id=1I2mTuUwAQQuLp3l34tcOAdYuSsWz2ejF" class="boton-saber-mas">Descargar APK</a>
+        <p>Descarga desde movil</p>
     </div>
     </section>
 
