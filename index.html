@@ -14,12 +14,13 @@
         
         function load() {
           var ua = navigator.userAgent;
-  
+           var wn = document.getElementById('Windows');
+           var ad = document.getElementById('Android');
           if (ua.match('Win').length!=0) {
-              $('#Android').remove();
+              ad.remove();
           }
           if (ua.match('Android').length!=0) {
-              $('#Windows').remove();
+              wn.remove();
           }
           alert("evento load detectado!");
         }
